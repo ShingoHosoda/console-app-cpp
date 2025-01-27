@@ -27,3 +27,7 @@
 ### ドキュメント管理
 
 - Notion
+
+### CI/CD
+
+- GitHub Actions
