@@ -31,3 +31,7 @@
 ### CI/CD
 
 - GitHub Actions
+
+## Writer and Copyright
+
+Shingo Hosoda
