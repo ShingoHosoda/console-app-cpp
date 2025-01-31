@@ -24,6 +24,10 @@
 
 - Git/GitHub
 
+### デザイン
+
+- Figma
+
 ### ドキュメント管理
 
 - Notion
