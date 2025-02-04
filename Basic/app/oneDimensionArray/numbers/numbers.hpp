@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <sstream>
 namespace app
 {
   /// @brief 値を数値リストに追加する。
