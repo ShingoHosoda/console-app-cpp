@@ -1,3 +1,6 @@
+/**
+ * @todo 入力を番号に変更し条件分岐はswitch文に変更する。
+ */
 #include <iostream>
 #include <vector>
 int main()
@@ -15,6 +18,38 @@ int main()
               << "print: " << "値を出力します。" << "\n"
               << "exit: " << "アプリケーションの終了。" << "\n"
               << "-------------------------------------------\n";
+    std::string command{};
+    std::getline(std::cin, command);
+    if (command == "add")
+    {
+    }
+    else if (command == "remove")
+    {
+    }
+    else if (command == "update")
+    {
+    }
+    else if (command == "find")
+    {
+    }
+    else if (command == "sortAsc")
+    {
+    }
+    else if (command == "sortDesc")
+    {
+    }
+    else if (command == "print")
+    {
+    }
+    else if (command == "exit")
+    {
+      return 0;
+    }
+    else
+    {
+      std::cout << "無効な入力です。" << std::endl;
+      continue;
+    }
   }
 
   return 0;
