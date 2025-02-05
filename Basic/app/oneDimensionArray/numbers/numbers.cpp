@@ -1,5 +1,4 @@
 #include "numbers.hpp"
-
 bool app::isNumber(std::string &s)
 {
   for (const auto &c : s)
@@ -95,10 +94,12 @@ bool app::find(std::vector<int> &numbers, std::string number)
 
 void app::sortAsc(std::vector<int> &numbers)
 {
+  std::sort(numbers.begin(), numbers.end());
 }
 
 void app::sortDesc(std::vector<int> &numbers)
 {
+  std::sort(numbers.begin(), numbers.end(), std::greater<int>());
 }
 
 void app::print(std::vector<int> &numbers)
