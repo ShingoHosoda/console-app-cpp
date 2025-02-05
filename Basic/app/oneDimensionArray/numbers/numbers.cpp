@@ -52,7 +52,7 @@ void app::update(std::vector<int> &numbers, std::string number1, std::string num
   std::cout << "数値を更新します\n";
   if (isNumber(number1) == false && isNumber(number2) == false)
   {
-    std::cout << "入力値が正しくありません。数値を削除できませんでした。\n";
+    std::cout << "入力値が正しくありません。数値を更新できませんでした。\n";
   }
   else
   {
