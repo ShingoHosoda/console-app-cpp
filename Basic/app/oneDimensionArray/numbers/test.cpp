@@ -65,10 +65,27 @@ void testUpdate()
   std::cout << "テスト成功" << std::endl;
 }
 
+void TestFind()
+{
+  std::cout << "テスト開始" << std::endl;
+  std::vector<int> numbers1;
+  app::add(numbers1, std::to_string(0));
+  app::add(numbers1, std::to_string(1));
+  app::add(numbers1, std::to_string(2));
+  app::add(numbers1, std::to_string(3));
+  app::add(numbers1, std::to_string(4));
+  auto flag1 = app::find(numbers1, std::to_string(2));
+  assert(flag1 == true);
+  auto flag2 = app::find(numbers1, std::to_string(12));
+  assert(flag2 == false);
+  std::cout << "テスト成功" << std::endl;
+}
+
 int main()
 {
   // testAdd();
   // testRemove();
-  testUpdate();
+  // testUpdate();
+  TestFind();
   return 0;
 }
