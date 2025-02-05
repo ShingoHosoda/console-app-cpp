@@ -12,11 +12,8 @@ bool app::isNumber(std::string &s)
   return false;
 }
 
-void app::add(std::vector<int> &numbers)
+void app::add(std::vector<int> &numbers, std::string number)
 {
-  std::cout << "新しい数値を入力してください。\n";
-  std::string number;
-  std::getline(std::cin, number);
   if (!isNumber(number))
   {
     std::cout << "入力値が正しくありません。数値を追加できませんでした。\n";
@@ -30,6 +27,7 @@ void app::add(std::vector<int> &numbers)
 
 void app::remove(std::vector<int> &numbers)
 {
+
 }
 
 void app::update(std::vector<int> &numbers)

@@ -23,7 +23,10 @@ int main()
     std::getline(std::cin, command);
     if (command == "add")
     {
-      app::add(numbers);
+      std::cout << "新しい数値を入力してください。\n";
+      std::string number;
+      std::getline(std::cin, number);
+      app::add(numbers, number);
     }
     else if (command == "remove")
     {

@@ -12,7 +12,7 @@ namespace app
   
   /// @brief 値を数値リストに追加する。
   /// @param numbers 数値リスト
-  void add(std::vector<int> &numbers);
+  void add(std::vector<int> &numbers, std::string number);
 
   /// @brief 値を数値リストから削除する。
   /// @param numbers 数値リスト
