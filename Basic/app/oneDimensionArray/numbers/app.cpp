@@ -1,5 +1,6 @@
 /**
  * @todo 入力を番号に変更し条件分岐はswitch文に変更する。
+ * @todo 早期returnを検討
  */
 #include <iostream>
 #include <vector>
