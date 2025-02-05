@@ -3,6 +3,7 @@
  */
 #include <iostream>
 #include <vector>
+#include "numbers.hpp"
 int main()
 {
   std::vector<int> numbers;
@@ -22,6 +23,7 @@ int main()
     std::getline(std::cin, command);
     if (command == "add")
     {
+      app::add(numbers);
     }
     else if (command == "remove")
     {
@@ -40,6 +42,7 @@ int main()
     }
     else if (command == "print")
     {
+      app::print(numbers);
     }
     else if (command == "exit")
     {

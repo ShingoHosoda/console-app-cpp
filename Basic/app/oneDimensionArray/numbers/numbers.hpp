@@ -5,6 +5,11 @@
 #include <sstream>
 namespace app
 {
+  /// @brief 数字かどうか確認する。
+  /// @param s 文字列
+  /// @return 数字の場合Trueを返す、数字でない場合はFalseを返す。
+  bool isNumber(std::string &s);
+  
   /// @brief 値を数値リストに追加する。
   /// @param numbers 数値リスト
   void add(std::vector<int> &numbers);
