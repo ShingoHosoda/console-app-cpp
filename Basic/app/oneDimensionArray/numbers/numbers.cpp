@@ -25,9 +25,24 @@ void app::add(std::vector<int> &numbers, std::string number)
   }
 }
 
-void app::remove(std::vector<int> &numbers)
+void app::remove(std::vector<int> &numbers, std::string number)
 {
-
+  if (!isNumber(number))
+  {
+    std::cout << "入力値が正しくありません。数値を削除できませんでした。\n";
+  }
+  else
+  {
+    auto iterator = std::find_if(std::cbegin(numbers), std::cend(numbers), [number](int value)
+                                 { return value == std::stoi(number); });
+    if (iterator == std::cend(numbers))
+    {
+      std::cout << "指定した数値は存在しませんでした。\n";
+    } else {
+      numbers.erase(iterator);
+      std::cout << "指定した数値は削除しました。\n";
+    }
+  }
 }
 
 void app::update(std::vector<int> &numbers)

@@ -30,6 +30,9 @@ int main()
     }
     else if (command == "remove")
     {
+      std::cout << "削除する数値を入力してください。\n";
+      std::string number;
+      std::getline(std::cin, number);
     }
     else if (command == "update")
     {
