@@ -59,13 +59,18 @@ int main()
     }
     else if (command == "find")
     {
-      
+      std::cout << "検索する数値を入力してください。\n";
+      std::string number;
+      std::getline(std::cin, number);
+      app::find(numbers, number);
     }
     else if (command == "sortAsc")
     {
+      app::sortAsc(numbers);
     }
     else if (command == "sortDesc")
     {
+      app::sortDesc(numbers);
     }
     else if (command == "print")
     {
