@@ -110,3 +110,19 @@ void app::print(std::vector<int> &numbers)
     std::cout << v << "\n";
   }
 }
+
+bool app::exit(bool isChanged)
+{
+  if (isChanged)
+  {
+    std::cout << "変更内容をファイルに書き込んでません。本当に終了しますか?（本当に書き込まれません）\n";
+    std::string input{};
+    std::cin >> input;
+    if (input != "y" && input != "Y")
+    {
+      return false;
+    }
+  }
+  std::cout << "アプリケーションを終了します\n";
+  return true;
+}

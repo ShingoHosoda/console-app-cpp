@@ -78,6 +78,7 @@ int main()
     }
     else if (command == "exit")
     {
+      app::exit(isChanged);
       return 0;
     }
     else

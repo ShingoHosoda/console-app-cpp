@@ -46,4 +46,9 @@ namespace app
   /// @brief 数値リストを表示する。
   /// @param numbers 数値リスト
   void print(std::vector<int> &numbers);
+
+  /// @brief 数値リストのEXIT制御
+  /// @param isChanged 数値リストがファイルに書き込まれていない場合True、書き込まれている場合False。
+  /// @return 数値リストアプリケーションを終了する場合True、終了しない場合はFalseを返す。
+  bool exit(bool isChanged);
 }
