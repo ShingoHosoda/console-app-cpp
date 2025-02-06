@@ -8,6 +8,7 @@
 int main()
 {
   std::vector<int> numbers;
+  auto isChanged = false;
   while (true)
   {
     std::cout << "-------------------------------------------\n"
@@ -27,19 +28,38 @@ int main()
       std::cout << "新しい数値を入力してください。\n";
       std::string number;
       std::getline(std::cin, number);
-      app::add(numbers, number);
+      if (app::add(numbers, number))
+      {
+        isChanged = true; // 変更を確認
+      }
     }
     else if (command == "remove")
     {
       std::cout << "削除する数値を入力してください。\n";
       std::string number;
       std::getline(std::cin, number);
+      if (app::remove(numbers, number))
+      {
+        isChanged = true; // 変更を確認
+      }
     }
     else if (command == "update")
     {
+      std::cout << "更新前の数値と更新後の数値を入力してください。";
+      std::string updateNumber{};
+      std::istringstream stream{};
+      std::getline(std::cin, updateNumber);
+      stream.str(updateNumber);
+      std::string number1, number2;
+      stream >> number1 >> number2;
+      if (app::update(numbers, number1, number2))
+      {
+        isChanged = true; // 変更を確認
+      }
     }
     else if (command == "find")
     {
+      
     }
     else if (command == "sortAsc")
     {
