@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cassert>
 #include <string>
+#include <fstream>
+#include <sstream>
 #include <random>
 namespace app
 {

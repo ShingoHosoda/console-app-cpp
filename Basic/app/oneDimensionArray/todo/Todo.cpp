@@ -18,7 +18,37 @@ std::string app::generateID(const std::string &candidateCharacters, std::size_t 
 
 bool app::add(std::vector<Todo> &todos)
 {
-  return false;
+  Todo todo;
+  std::istringstream stream{};
+  std::string tmp{};
+  std::cout << "TODOリストに新しいTODOを追加します。\n";
+
+  std::string candidateCharacters = "abcdefghijklmnopqrstuvwxyz";
+  std::size_t length = 8;
+  std::string id = app::generateID(candidateCharacters, length);
+  todo.id = id;
+
+  std::cout << "TODOのタイトルを入力してください。: ";
+  std::getline(std::cin, todo.title);
+
+  std::cout << "TODOの期限を入力してください。";
+  std::getline(std::cin, todo.dueDate);
+
+  std::cout << "TODOが完了済みかどうか。: ";
+  std::getline(std::cin, tmp);
+  stream.str(tmp);
+  stream >> todo.completed;
+  if (!stream)
+  {
+    std::cout << "入力値が正しくありません。TODOを追加できませんでした。\n";
+    return false; // 正常に追加できなかった。
+  }
+  else
+  {
+    std::cout << "新しいTODOを追加します。\n";
+    todos.push_back(todo);
+    return true; // 正常に追加できた。
+  }
 }
 
 bool app::remove(std::vector<Todo> &todos)
@@ -55,6 +85,11 @@ bool app::readTSV(const std::vector<Todo> &todos)
 
 void app::print(const std::vector<Todo> &todos)
 {
+  std::cout << "登録されているTODOを出力します。\n";
+  for (auto &todo : todos)
+  {
+    std::cout << std::boolalpha << todo << "\n";
+  }
 }
 
 bool app::exit(bool isChanged)
