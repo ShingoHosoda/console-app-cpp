@@ -23,6 +23,15 @@ int main()
         isChanged = true; // 変更あり
       }
     }
-    return 0;
+    else if (command == "print")
+    {
+      app::print(todos);
+    }
+    else if (command == "exit")
+    {
+      app::exit(isChanged);
+      return 0;
+    }
   }
+  return 0;
 }

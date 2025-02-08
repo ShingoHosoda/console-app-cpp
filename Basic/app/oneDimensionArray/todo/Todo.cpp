@@ -25,8 +25,9 @@ bool app::add(std::vector<Todo> &todos)
 
   std::string candidateCharacters = "abcdefghijklmnopqrstuvwxyz0123456789";
   std::size_t length = 8;
-  std::string id = app::generateID(candidateCharacters, length);
-  todo.id = id;
+  std::string id1 = app::generateID(candidateCharacters, length);
+  std::string id2 = app::generateID(candidateCharacters, length);
+  todo.id = id1 + "-" + id2;
 
   std::cout << "TODOのタイトルを入力してください。: ";
   std::getline(std::cin, todo.title);
