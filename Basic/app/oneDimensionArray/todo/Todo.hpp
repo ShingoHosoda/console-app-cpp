@@ -63,11 +63,11 @@ namespace app
 
   /// @brief 期限日からTODOを検索します。
   /// @param todos TODOリスト
-  void findByDueDate(const std::vector<Todo> &todos);
+  std::vector<Todo> findByDueDate(const std::vector<Todo> &todos);
 
   /// @brief 完了済みかどうかTODOを検索します。
   /// @param todos TODOリスト
-  void findByCompleted(const std::vector<Todo> &todos);
+  std::vector<Todo> findByCompleted(const std::vector<Todo> &todos);
 
   /// @brief TODOリストをファイルに書き込みます。
   /// @param todos TODOリスト
