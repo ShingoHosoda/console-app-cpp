@@ -80,14 +80,20 @@ bool app::update(std::vector<Todo> &todos)
 
 std::vector<Todo> app::findByTitle(const std::vector<Todo> &todos)
 {
+  std::vector<Todo> results;
+  return results;
 }
 
 std::vector<Todo> app::findByDueDate(const std::vector<Todo> &todos)
 {
+  std::vector<Todo> results;
+  return results;
 }
 
 std::vector<Todo> app::findByCompleted(const std::vector<Todo> &todos)
 {
+  std::vector<Todo> results;
+  return results;
 }
 
 bool app::writeTSV(const std::vector<Todo> &todos)
