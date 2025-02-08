@@ -56,7 +56,7 @@ bool app::remove(std::vector<Todo> &todos)
 {
   std::cout << "TODOを削除します。\n";
   std::string title;
-  std::cout << "タイトルを入力してください。\n";
+  std::cout << "タイトルを入力してください。: ";
   std::getline(std::cin, title);
   auto iterator = std::find_if(std::cbegin(todos), std::cend(todos), [title](Todo todo)
                                { return todo.title == title; });
