@@ -32,7 +32,7 @@ bool app::add(std::vector<Todo> &todos)
   std::cout << "TODOのタイトルを入力してください。: ";
   std::getline(std::cin, todo.title);
 
-  std::cout << "TODOの期限を入力してください。";
+  std::cout << "TODOの期限を入力してください。: ";
   std::getline(std::cin, todo.dueDate);
 
   std::cout << "TODOが完了済みかどうか。: ";
