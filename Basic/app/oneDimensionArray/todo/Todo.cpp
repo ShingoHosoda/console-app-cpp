@@ -54,7 +54,23 @@ bool app::add(std::vector<Todo> &todos)
 
 bool app::remove(std::vector<Todo> &todos)
 {
-  return false;
+  std::cout << "TODOを削除します。\n";
+  std::string title;
+  std::cout << "タイトルを入力してください。\n";
+  std::getline(std::cin, title);
+  auto iterator = std::find_if(std::cbegin(todos), std::cend(todos), [title](Todo todo)
+                               { return todo.title == title; });
+  if (iterator == std::cend(todos))
+  {
+    std::cout << "指定されたTODOは存在しません。\n";
+    return false;
+  }
+  else
+  {
+    todos.erase(iterator);
+    std::cout << "指定されたTODOは削除しました。\n";
+    return true;
+  }
 }
 
 bool app::update(std::vector<Todo> &todos)
