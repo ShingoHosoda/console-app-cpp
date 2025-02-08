@@ -59,7 +59,7 @@ namespace app
 
   /// @brief タイトル名からTODOを検索します。
   /// @param todos TODOリスト
-  void findByTitle(const std::vector<Todo> &todos);
+  std::vector<Todo> findByTitle(const std::vector<Todo> &todos);
 
   /// @brief 期限日からTODOを検索します。
   /// @param todos TODOリスト

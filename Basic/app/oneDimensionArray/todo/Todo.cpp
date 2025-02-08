@@ -19,8 +19,8 @@ std::string app::generateID(const std::string &candidateCharacters, std::size_t 
 bool app::add(std::vector<Todo> &todos)
 {
   Todo todo;
-  std::istringstream stream {};
-  std::string tmp {};
+  std::istringstream stream{};
+  std::string tmp{};
   std::cout << "TODOリストに新しいTODOを追加します。\n";
 
   std::string candidateCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -78,7 +78,7 @@ bool app::update(std::vector<Todo> &todos)
   return false;
 }
 
-void app::findByTitle(const std::vector<Todo> &todos)
+std::vector<Todo> app::findByTitle(const std::vector<Todo> &todos)
 {
 }
 
