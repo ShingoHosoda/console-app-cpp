@@ -67,7 +67,7 @@ void TestRemove()
 
 int main()
 {
-  // TestAdd();
-  TestRemove();
+  TestAdd();
+  // TestRemove();
   return 0;
 }
