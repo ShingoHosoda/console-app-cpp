@@ -26,7 +26,7 @@ void TestAdd()
   auto index = 0;
   for (const auto &todo : todos1)
   {
-    assert(todo.title == todos2[index].title);
+    assert(todo.title == todos2[index].title && todo.dueDate == todos2[index].dueDate && todo.completed == todos2[index].completed);
     index += 1;
   }
 
@@ -58,7 +58,7 @@ void TestRemove()
   auto index = 0;
   for (const auto &todo : todos1)
   {
-    assert(todo.title == todos2[index].title);
+    assert(todo.title == todos2[index].title && todo.dueDate == todos2[index].dueDate && todo.completed == todos2[index].completed);
     index += 1;
   }
 
