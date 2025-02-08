@@ -64,6 +64,7 @@
     "optional": "cpp",
     "unordered_map": "cpp",
     "algorithm": "cpp",
-    "random": "cpp"
+    "random": "cpp",
+    "numeric": "cpp"
   }
 }

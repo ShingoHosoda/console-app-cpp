@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <cassert>
+#include <string>
+#include <random>
 namespace app
 {
   /// @brief TODO
@@ -82,4 +85,10 @@ namespace app
   /// @param isChanged TODOがファイルに書き込まれていない場合True、書き込まれている場合False
   /// @return TODOアプリケーションを終了する場合True、終了しない場合はFalseを返す。
   bool exit(bool isChanged);
+  
+  /// @brief IDを生成する。
+  /// @param candidateCharacters 生成候補の文字列。
+  /// @param length 文字列の長さ。
+  /// @return 生成したIDを返す。
+  std::string generateID(const std::string &candidateCharacters, std::size_t length);
 }
