@@ -81,7 +81,7 @@ TODOアプリケーションの開発ただし複雑なものは作ら内容に�
 |       追加        | trueもしくはfalseを出力。 | ```boolean``` |
 |       削除        | trueもしくはfalseを出力。 | ```boolean``` |
 |       更新        | trueもしくはfalseを出力。 | ```boolean``` |
-|       検索        | trueもしくはfalseを出力。 | ```boolean``` |
+|       検索        | 検索結果のTODOを出力。 | ```vector``` |
 |  ソート（昇順）   |           なし            |  ```void```   |
 |  ソート（降順）   |           なし            |  ```void```   |
 | TSV形式の書き出し | trueもしくはfalseを出力。 | ```boolean``` |
