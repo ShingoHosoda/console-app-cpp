@@ -19,8 +19,8 @@ std::string app::generateID(const std::string &candidateCharacters, std::size_t 
 bool app::add(std::vector<Todo> &todos)
 {
   Todo todo;
-  std::istringstream stream{};
-  std::string tmp{};
+  std::istringstream stream {};
+  std::string tmp {};
   std::cout << "TODOリストに新しいTODOを追加します。\n";
 
   std::string candidateCharacters = "abcdefghijklmnopqrstuvwxyz";
