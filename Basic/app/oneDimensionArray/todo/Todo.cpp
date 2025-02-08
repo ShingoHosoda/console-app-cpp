@@ -23,7 +23,7 @@ bool app::add(std::vector<Todo> &todos)
   std::string tmp {};
   std::cout << "TODOリストに新しいTODOを追加します。\n";
 
-  std::string candidateCharacters = "abcdefghijklmnopqrstuvwxyz";
+  std::string candidateCharacters = "abcdefghijklmnopqrstuvwxyz0123456789";
   std::size_t length = 8;
   std::string id = app::generateID(candidateCharacters, length);
   todo.id = id;
