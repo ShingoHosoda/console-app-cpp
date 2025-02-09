@@ -71,13 +71,15 @@ namespace app
 
   /// @brief TODOリストをファイルに書き込みます。
   /// @param todos TODOリスト
+  /// @param path ファイルのパス
   /// @return 正常に書き込まれた場合True、ファイルが開けないもしくは書き込みが行えなかった場合はFalseを返します。
-  bool writeTSV(const std::vector<Todo> &todos);
+  bool writeTSV(const std::vector<Todo> &todos, const std::string &path);
 
   /// @brief TODOリストをファイルを読み込みます。
   /// @param todos TODOリスト
+  /// @param path ファイルのパス
   /// @return 正常に読み込めた場合True、ファイルが開けなかった場合Falseを返します。
-  bool readTSV(const std::vector<Todo> &todos);
+  bool readTSV(const std::vector<Todo> &todos, const std::string &path);
 
   /// @brief 登録されているTODOを出力します。
   /// @param todos TODOリスト
@@ -87,7 +89,7 @@ namespace app
   /// @param isChanged TODOがファイルに書き込まれていない場合True、書き込まれている場合False
   /// @return TODOアプリケーションを終了する場合True、終了しない場合はFalseを返す。
   bool exit(bool isChanged);
-  
+
   /// @brief IDを生成する。
   /// @param candidateCharacters 生成候補の文字列。
   /// @param length 文字列の長さ。

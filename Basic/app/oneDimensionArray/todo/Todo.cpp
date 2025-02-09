@@ -63,7 +63,7 @@ bool app::remove(std::vector<Todo> &todos)
     std::cout << "指定されたTODOは存在しません。\n";
     return false;
   }
-  
+
   todos.erase(iterator);
   std::cout << "指定されたTODOは削除しました。\n";
   return true;
@@ -92,12 +92,12 @@ std::vector<Todo> app::findByCompleted(const std::vector<Todo> &todos)
   return results;
 }
 
-bool app::writeTSV(const std::vector<Todo> &todos)
+bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
 {
   return false;
 }
 
-bool app::readTSV(const std::vector<Todo> &todos)
+bool app::readTSV(const std::vector<Todo> &todos, const std::string &path)
 {
   return false;
 }
