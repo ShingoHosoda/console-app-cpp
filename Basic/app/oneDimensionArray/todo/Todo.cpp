@@ -126,10 +126,10 @@ bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
   return true;
 }
 
-bool app::readTSV(const std::vector<Todo> &todos, const std::string &path)
+bool app::readTSV(std::vector<Todo> &todos, const std::string &path)
 {
   std::cout << "TODOファイルを読み込みます。\n";
-  std::ifstream ifs("todo.tsv");
+  std::ifstream ifs(path);
   if (!ifs)
   {
     std::cout << "TODOファイルが開けませんでした。\n";
@@ -150,7 +150,6 @@ bool app::readTSV(const std::vector<Todo> &todos, const std::string &path)
   }
 
   return true;
-  ;
 }
 
 void app::print(const std::vector<Todo> &todos)

@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 #include <cassert>
+#include <algorithm>
 #include <string>
 #include <fstream>
 #include <sstream>
 #include <random>
+#include <vector>
 namespace app
 {
   /// @brief TODO
@@ -79,7 +81,7 @@ namespace app
   /// @param todos TODOリスト
   /// @param path ファイルのパス
   /// @return 正常に読み込めた場合True、ファイルが開けなかった場合Falseを返します。
-  bool readTSV(const std::vector<Todo> &todos, const std::string &path);
+  bool readTSV(std::vector<Todo> &todos, const std::string &path);
 
   /// @brief 登録されているTODOを出力します。
   /// @param todos TODOリスト
