@@ -128,7 +128,29 @@ bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
 
 bool app::readTSV(const std::vector<Todo> &todos, const std::string &path)
 {
-  return false;
+  std::cout << "TODOファイルを読み込みます。\n";
+  std::ifstream ifs("todo.tsv");
+  if (!ifs)
+  {
+    std::cout << "TODOファイルが開けませんでした。\n";
+    return false;
+  }
+
+  todos.clear(); // メモリ上のデータをすべて消す。
+
+  while (ifs.eof() == false)
+  {
+    std::string text;
+    std::getline(ifs, text);
+    std::istringstream stream(text);
+    std::string id, title, dueDate;
+    bool isCompleted;
+    stream >> id >> title >> dueDate >> isCompleted;
+    todos.push_back({id, title, dueDate, isCompleted});
+  }
+
+  return true;
+  ;
 }
 
 void app::print(const std::vector<Todo> &todos)
