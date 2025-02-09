@@ -44,12 +44,10 @@ bool app::add(std::vector<Todo> &todos)
     std::cout << "入力値が正しくありません。TODOを追加できませんでした。\n";
     return false; // 正常に追加できなかった。
   }
-  else
-  {
-    std::cout << "新しいTODOを追加します。\n";
-    todos.push_back(todo);
-    return true; // 正常に追加できた。
-  }
+
+  std::cout << "新しいTODOを追加します。\n";
+  todos.push_back(todo);
+  return true; // 正常に追加できた。
 }
 
 bool app::remove(std::vector<Todo> &todos)
@@ -65,12 +63,10 @@ bool app::remove(std::vector<Todo> &todos)
     std::cout << "指定されたTODOは存在しません。\n";
     return false;
   }
-  else
-  {
-    todos.erase(iterator);
-    std::cout << "指定されたTODOは削除しました。\n";
-    return true;
-  }
+  
+  todos.erase(iterator);
+  std::cout << "指定されたTODOは削除しました。\n";
+  return true;
 }
 
 bool app::update(std::vector<Todo> &todos)
