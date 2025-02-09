@@ -109,6 +109,13 @@ void TestReadTSV()
       {"01234567-00000007", "タイトル7", "2025-02-10", 0},
   };
 
+  auto index = 0;
+  for (const auto &todo : todos1)
+  {
+    assert(todo.title == todos2[index].title && todo.dueDate == todos2[index].dueDate && todo.completed == todos2[index].completed);
+    index += 1;
+  }
+
   std::cout << "テスト成功" << std::endl;
 }
 
@@ -117,5 +124,6 @@ int main()
   // TestAdd();
   // TestRemove();
   // TestWriteTSV();
+  TestReadTSV();
   return 0;
 }
