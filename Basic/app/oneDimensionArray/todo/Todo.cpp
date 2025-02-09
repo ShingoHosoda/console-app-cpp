@@ -94,7 +94,36 @@ std::vector<Todo> app::findByCompleted(const std::vector<Todo> &todos)
 
 bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
 {
-  return false;
+  std::ofstream ofs(path);
+  if (!ofs)
+  {
+    std::cout << "TODOファイルが開けませんでした。\n";
+    return false;
+  }
+
+  auto count = 0;
+  auto len = todos.size();
+  for (auto &todo : todos)
+  {
+    if (count == len - 1)
+    {
+      ofs << todo.id << " " << todo.title << " " << todo.dueDate << " " << todo.completed;
+    }
+    else
+    {
+      ofs << todo.id << " " << todo.title << " " << todo.dueDate << " " << todo.completed << "\n";
+    }
+    count += 1;
+  }
+
+  if (!ofs)
+  {
+    std::cout << "TODOをファイルに書き込めませんでした。\n";
+    return false;
+  }
+
+  std::cout << "TODOをファイルに書き込みました。\n";
+  return true;
 }
 
 bool app::readTSV(const std::vector<Todo> &todos, const std::string &path)
