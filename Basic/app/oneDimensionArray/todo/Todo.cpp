@@ -29,7 +29,7 @@ bool app::add(std::vector<Todo> &todos)
   std::string id2 = app::generateID(candidateCharacters, length);
   todo.id = id1 + "-" + id2;
 
-  std::cout << "TODOのタイトルを入力してください: ";
+  std::cout << "TODOのタイトルを入力してください。: ";
   std::getline(std::cin, todo.title);
 
   std::cout << "TODOの期限を入力してください: ";
@@ -106,18 +106,54 @@ bool app::update(std::vector<Todo> &todos)
 std::vector<app::Todo> app::findByTitle(const std::vector<Todo> &todos)
 {
   std::vector<Todo> results;
+  std::cout << "タイトル名からTODOを検索を行い出力します。\n";
+  std::cout << "タイトル名を入力してください。\n";
+  std::string title{};
+  std::getline(std::cin, title);
+  for (auto &todo : todos)
+  {
+    if (todo.title = title)
+    {
+      results.push_back(todo);
+    }
+  }
   return results;
 }
 
 std::vector<app::Todo> app::findByDueDate(const std::vector<Todo> &todos)
 {
   std::vector<Todo> results;
+  std::cout << "期限日からTODOを検索を行い出力します。\n";
+  std::cout << "期限日を入力してください。\n";
+  std::string dueDate{};
+  std::getline(std::cin, dueDate);
+  for (auto &todo : todos)
+  {
+    if (todo.dueDate = dueDate)
+    {
+      results.push_back(todo);
+    }
+  }
   return results;
 }
 
 std::vector<app::Todo> app::findByCompleted(const std::vector<Todo> &todos)
 {
   std::vector<Todo> results;
+  std::cout << "完了済みかどうかTODOを検索を行い出力します。\n";
+  std::cout << "完了済みかどうかを入力してください。\n";
+  std::string input;
+  std::getline(std::cin, input);
+  std::istringstream stream(input);
+  bool completed{};
+  stream >> completed;
+  for (auto &todo : todos)
+  {
+    if (todo.completed = completed)
+    {
+      results.push_back(todo);
+    }
+  }
   return results;
 }
 
