@@ -112,7 +112,7 @@ std::vector<app::Todo> app::findByTitle(const std::vector<Todo> &todos)
   std::getline(std::cin, title);
   for (auto &todo : todos)
   {
-    if (todo.title = title)
+    if (todo.title == title)
     {
       results.push_back(todo);
     }
@@ -129,7 +129,7 @@ std::vector<app::Todo> app::findByDueDate(const std::vector<Todo> &todos)
   std::getline(std::cin, dueDate);
   for (auto &todo : todos)
   {
-    if (todo.dueDate = dueDate)
+    if (todo.dueDate == dueDate)
     {
       results.push_back(todo);
     }
@@ -149,7 +149,7 @@ std::vector<app::Todo> app::findByCompleted(const std::vector<Todo> &todos)
   stream >> completed;
   for (auto &todo : todos)
   {
-    if (todo.completed = completed)
+    if (todo.completed == completed)
     {
       results.push_back(todo);
     }
