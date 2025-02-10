@@ -29,13 +29,13 @@ bool app::add(std::vector<Todo> &todos)
   std::string id2 = app::generateID(candidateCharacters, length);
   todo.id = id1 + "-" + id2;
 
-  std::cout << "TODOのタイトルを入力してください。: ";
+  std::cout << "TODOのタイトルを入力してください: ";
   std::getline(std::cin, todo.title);
 
-  std::cout << "TODOの期限を入力してください。: ";
+  std::cout << "TODOの期限を入力してください: ";
   std::getline(std::cin, todo.dueDate);
 
-  std::cout << "TODOが完了済みかどうか。: ";
+  std::cout << "TODOが完了済みかどうか入力してください: ";
   std::getline(std::cin, tmp);
   stream.str(tmp);
   stream >> todo.completed;
@@ -89,10 +89,12 @@ bool app::update(std::vector<Todo> &todos)
       std::getline(std::cin, dueDate);
       todo.dueDate = dueDate;
 
-      std::string completed{};
-      std::cout << "完了したかどうか入力してください: ";
-      std::getline(std::cin, completed);
-      todo.completed = completed;
+      std::istringstream stream{};
+      std::string tmp{};
+      std::cout << "TODOが完了済みかどうか入力してください: ";
+      std::getline(std::cin, tmp);
+      stream.str(tmp);
+      stream >> todo.completed;
 
       return true;
     }
