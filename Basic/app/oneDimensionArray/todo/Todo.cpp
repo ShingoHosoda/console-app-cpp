@@ -71,6 +71,33 @@ bool app::remove(std::vector<Todo> &todos)
 
 bool app::update(std::vector<Todo> &todos)
 {
+  std::cout << "TODOを更新します。" << std::endl;
+  std::cout << "タイトル名を入力してください: ";
+  std::string title{};
+  std::getline(std::cin, title);
+  for (auto &todo : todos)
+  {
+    if (todo.title == title)
+    {
+      std::string newTitle{};
+      std::cout << "新しいタイトルを入力してください: ";
+      std::getline(std::cin, newTitle);
+      todo.title = newTitle;
+
+      std::string dueDate{};
+      std::cout << "新しい期限日を入力してください: ";
+      std::getline(std::cin, dueDate);
+      todo.dueDate = dueDate;
+
+      std::string completed{};
+      std::cout << "完了したかどうか入力してください: ";
+      std::getline(std::cin, completed);
+      todo.completed = completed;
+
+      return true;
+    }
+  }
+  std::cout << "指定されたTODOは存在しません。\n";
   return false;
 }
 
