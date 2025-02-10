@@ -118,6 +118,30 @@ void TestFindByTitle()
   std::cout << "テスト成功" << std::endl;
 }
 
+void TestFindByDueDate()
+{
+  std::cout << "テスト開始" << std::endl;
+  std::vector<app::Todo> todos;
+  app::readTSV(todos, "data/todo.tsv");
+  std::vector<app::Todo> todos1 = app::findByDueDate(todos);
+  std::vector<app::Todo> todos2{
+      {"01234567-00000000", "タイトル0", "2025-02-10", 0},
+      {"01234567-00000001", "タイトル1", "2025-02-10", 0},
+      {"01234567-00000005", "タイトル5", "2025-02-10", 0},
+      {"01234567-00000006", "タイトル6", "2025-02-10", 0},
+      {"01234567-00000007", "タイトル7", "2025-02-10", 0},
+  };
+  auto index = 0;
+  for (const auto &todo : todos1)
+  {
+    assert(todo.title == todos2[index].title && todo.dueDate == todos2[index].dueDate && todo.completed == todos2[index].completed);
+    index += 1;
+  }
+  std::cout << "テスト成功" << std::endl;
+}
+
+
+
 void TestWriteTSV()
 {
   std::cout << "テスト開始" << std::endl;
@@ -215,7 +239,8 @@ int main()
   // TestAdd();
   // TestRemove();
   // TestUpdate();
-  TestFindByTitle();
+  // TestFindByTitle();
+  TestFindByDueDate();
   // TestWriteTSV();
   // TestReadTSV();
   // TestWriteReadTSV();
