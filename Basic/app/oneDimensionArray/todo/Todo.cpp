@@ -228,5 +228,16 @@ void app::print(const std::vector<Todo> &todos)
 
 bool app::exit(bool isChanged)
 {
-  return false;
+  if (isChanged)
+  {
+    std::cout << "変更内容をファイルに書き込んでません。本当に終了しますか?\n";
+    std::string input{};
+    std::cin >> input;
+    if (input != "y" && input != "Y")
+    {
+      return false;
+    }
+  }
+  std::cout << "アプリケーションを終了します。\n";
+  return true;
 }
