@@ -257,6 +257,27 @@ void TestWriteReadTSV()
   std::cout << "テスト成功" << std::endl;
 }
 
+void TestExit()
+{
+  std::cout << "テスト開始" << std::endl;
+  bool isChanged = false;
+  std::vector<app::Todo> todos{};
+  assert(app::add(todos) == true);
+  isChanged = true;
+  assert(app::add(todos) == true);
+  isChanged = true;
+  assert(app::add(todos) == true);
+  isChanged = true;
+  assert(app::add(todos) == true);
+  isChanged = true;
+  assert(app::add(todos) == true);
+  isChanged = true;
+  assert(app::writeTSV(todos, "data/todo.tsv") == true);
+  isChanged = false;
+  assert(app::exit(isChanged) == true); // 正常に保存された場合警告なしでするはずです。
+  std::cout << "テスト成功" << std::endl;
+}
+
 int main()
 {
   // TestAdd();
@@ -264,9 +285,10 @@ int main()
   // TestUpdate();
   // TestFindByTitle();
   // TestFindByDueDate();
-  TestFindByCompleted();
+  // TestFindByCompleted();
   // TestWriteTSV();
   // TestReadTSV();
   // TestWriteReadTSV();
+  TestExit();
   return 0;
 }
