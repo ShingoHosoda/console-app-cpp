@@ -1,5 +1,5 @@
 #include "Todo.hpp"
-
+#include "TodoLess.hpp"
 std::string app::generateID(const std::string &candidateCharacters, std::size_t length)
 {
   assert(!candidateCharacters.empty());
@@ -157,12 +157,12 @@ std::vector<app::Todo> app::findByCompleted(const std::vector<Todo> &todos)
   return results;
 }
 
-void app::sortByAsc(std::vector<Todo>& todos)
+void app::sortByAsc(std::vector<Todo> &todos)
 {
-  
+  std::sort(todos.begin(), todos.end(), TodoLess{});
 }
 
-void app::sortByDesc(std::vector<Todo>& todos)
+void app::sortByDesc(std::vector<Todo> &todos)
 {
 }
 
