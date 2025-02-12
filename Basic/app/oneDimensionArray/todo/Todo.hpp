@@ -7,6 +7,7 @@
 #include <sstream>
 #include <random>
 #include <vector>
+#include <tuple>
 namespace app
 {
   /// @brief TODO
@@ -70,6 +71,14 @@ namespace app
   /// @brief 完了済みかどうかTODOを検索します。
   /// @param todos TODOリスト
   std::vector<Todo> findByCompleted(const std::vector<Todo> &todos);
+
+  /// @brief TODOを昇順にソートします。
+  /// @param todos TODOリスト
+  void sortByAsc(std::vector<Todo> &todos);
+
+  /// @brief TODOを昇順にソートします。
+  /// @param todos TODOリスト
+  void sortByDesc(std::vector<Todo> &todos);
 
   /// @brief TODOリストをファイルに書き込みます。
   /// @param todos TODOリスト

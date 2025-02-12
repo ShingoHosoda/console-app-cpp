@@ -157,6 +157,15 @@ std::vector<app::Todo> app::findByCompleted(const std::vector<Todo> &todos)
   return results;
 }
 
+void app::sortByAsc(std::vector<Todo>& todos)
+{
+  
+}
+
+void app::sortByDesc(std::vector<Todo>& todos)
+{
+}
+
 bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
 {
   std::ofstream ofs(path);
