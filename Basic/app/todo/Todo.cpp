@@ -1,5 +1,6 @@
 #include "Todo.hpp"
 #include "TodoLess.hpp"
+#include "TodoGreater.hpp"
 std::string app::generateID(const std::string &candidateCharacters, std::size_t length)
 {
   assert(!candidateCharacters.empty());
@@ -164,6 +165,7 @@ void app::sortByAsc(std::vector<Todo> &todos)
 
 void app::sortByDesc(std::vector<Todo> &todos)
 {
+  std::sort(todos.begin(), todos.end(), TodoGreater{});
 }
 
 bool app::writeTSV(const std::vector<Todo> &todos, const std::string &path)
