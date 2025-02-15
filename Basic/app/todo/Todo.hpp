@@ -37,6 +37,12 @@ namespace app
       return (todo1.id) == (todo2.id) && (todo1.title) == (todo2.title) && (todo1.dueDate) == (todo2.dueDate) && (todo1.completed) == (todo2.completed);
     }
 
+    [[nodiscard]]
+    friend constexpr bool operator!=(Todo &todo1, Todo &todo2)
+    {
+      return (todo1.id) != (todo2.id) && (todo1.title) != (todo2.title) && (todo1.dueDate) != (todo2.dueDate) && (todo1.completed) != (todo2.completed);
+    }
+
     template <class CharType>
     friend std::basic_ostream<CharType> &operator<<(std::basic_ostream<CharType> &output, const Todo &todo)
     {
