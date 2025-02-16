@@ -44,3 +44,6 @@ SELECT * FROM todo WHERE completed = TRUE;
 SELECT * FROM todo WHERE completed = FALSE;
 -- 特定の文字列が含まれているタイトルを検索
 SELECT * FROM todo WHERE title LIKE 'タイトル0%';
+-- 期限日を特定の区間で検索
+SELECT * FROM todo WHERE (duedate >= '2025-03-01' AND duedate <= '2025-03-15');
+SELECT * FROM todo WHERE NOT (duedate >= '2025-03-01' AND duedate <= '2025-03-15');
