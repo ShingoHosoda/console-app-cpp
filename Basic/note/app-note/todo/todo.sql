@@ -1,3 +1,6 @@
+-- Webアプリケーションに向けてのSQLコード
+-- createdb-17 todo
+-- psql-17 todo
 -- PostgreSQL16 and 17で動作確認済み
 -- テーブルの作成
 CREATE TABLE todo(
