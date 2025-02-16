@@ -38,3 +38,9 @@ SELECT * FROM todo ORDER BY duedate DESC;
 -- 完了かどうかを基準に昇順と降順
 SELECT * FROM todo ORDER BY completed ASC;
 SELECT * FROM todo ORDER BY completed DESC;
+-- Search
+-- 完了しているかどうかで検索
+SELECT * FROM todo WHERE completed = TRUE;
+SELECT * FROM todo WHERE completed = FALSE;
+-- 特定の文字列が含まれているタイトルを検索
+SELECT * FROM todo WHERE title LIKE 'タイトル0%';
