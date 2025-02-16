@@ -28,3 +28,13 @@ SELECT * FROM todo;
 UPDATE todo SET completed = TRUE WHERE id = '7ac91684-9ee0-4877-9921-d0c281c7aead';
 -- Delete
 DELETE FROM todo WHERE id = '94bf5f2b-6fa4-493e-92c8-03230fa6e534';
+-- Sort
+-- タイトルを基準に昇順と降順
+SELECT * FROM todo ORDER BY title ASC;
+SELECT * FROM todo ORDER BY title DESC;
+-- 期限日を基準に昇順と降順
+SELECT * FROM todo ORDER BY duedate ASC;
+SELECT * FROM todo ORDER BY duedate DESC;
+-- 完了かどうかを基準に昇順と降順
+SELECT * FROM todo ORDER BY completed ASC;
+SELECT * FROM todo ORDER BY completed DESC;
