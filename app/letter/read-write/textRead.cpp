@@ -1,6 +1,6 @@
-#include "readLetter.hpp"
+#include "textRead.hpp"
 
-bool letter::readLetter(const std::string path, std::vector<std::string> &letter)
+bool letter::textRead(const std::string path, std::vector<std::string> &letter)
 {
   std::ifstream ifs(path);
   if (!ifs)

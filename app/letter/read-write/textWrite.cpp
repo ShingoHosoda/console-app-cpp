@@ -1,6 +1,6 @@
-#include "writeLetter.hpp"
+#include "textWrite.hpp"
 
-bool letter::writeLetter(const std::string path, const std::vector<std::string> &letter)
+bool letter::textWrite(const std::string path, const std::vector<std::string> &letter)
 {
   std::ofstream ofs(path);
   if (!ofs)

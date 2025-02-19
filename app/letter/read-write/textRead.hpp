@@ -10,5 +10,5 @@ namespace letter
   /// @param letter テキストファイルのデータ。
   /// @return 読み込みが上手くいった場合true、そうでない場合はfalseを返します。
   [[nodiscard]]
-  bool readLetter(const std::string path, std::vector<std::string> &letter);
+  bool textRead(const std::string path, std::vector<std::string> &letter);
 }
