@@ -2,7 +2,8 @@
 #include <vector>
 #include <cassert>
 #include "readLetter.hpp"
-/// @brief 1行手紙の読み込みテスト
+#include "writeLetter.hpp"
+/// @brief 1行手紙の読み込みテストです。
 void TestReadOneLineLetter()
 {
   std::cout << "テスト開始" << std::endl;
@@ -19,7 +20,7 @@ void TestReadOneLineLetter()
   std::cout << "テスト成功" << std::endl;
 }
 
-/// @brief テキストファイルの読み込みテスト
+/// @brief テキストファイルの読み込みテストです。
 void TestReadLetter()
 {
   std::cout << "テスト開始" << std::endl;
@@ -32,11 +33,42 @@ void TestReadLetter()
       {"endeavour to stay where you left us till I hear from you, give"},
       {"your advice. Your unhappy wife not well."}};
   auto index = 0;
-  for (const auto &oneLineLetter1 : letter)
+  for (const auto &letterText : letter)
   {
-    assert(oneLineLetter1 == oneLineLetter2[index]);
+    assert(letterText == oneLineLetter2[index]);
     index += 1;
   }
+  std::cout << "テスト成功" << std::endl;
+}
+
+/// @brief テキストファイルの書き込みテストです。
+void TestWriteLetter()
+{
+  std::cout << "テスト開始" << std::endl;
+
+  std::vector<std::string> letter = {
+      {"PRIVATE advertisement no one knows (two today). Write me first"},
+      {"through lough. Disgrace you left behind cannot get over. Will"},
+      {"endeavour to stay where you left us till I hear from you, give"},
+      {"your advice. Your unhappy wife not well."}};
+  std::string outputPath{"data/output/private-text-letter.txt"};
+  assert(letter::writeLetter(outputPath, letter) == true);
+
+  std::vector<std::string> letter1;
+  std::string inputPath1{"data/output/private-text-letter.txt"};
+  assert(letter::readLetter(inputPath1, letter1) == true); // 正常に書き込まれているならば正常に読み込めるはずです。
+
+  std::vector<std::string> letter2;
+  std::string inputPath2{"data/input/private-text-letter.txt"};
+  assert(letter::readLetter(inputPath2, letter2) == true); // 正常に読み込めていることが読み込みのテストで保証されています。
+
+  auto index = 0;
+  for (const auto &letterText : letter1)
+  {
+    assert(letterText == letter2[index]);
+    index += 1;
+  }
+
   std::cout << "テスト成功" << std::endl;
 }
 
@@ -44,5 +76,6 @@ int main()
 {
   TestReadOneLineLetter();
   TestReadLetter();
+  TestWriteLetter();
   return 0;
 }
