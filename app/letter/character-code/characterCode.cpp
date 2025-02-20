@@ -39,7 +39,7 @@ int main()
   assert(convertBase10ToBase2(11) == "1011");
   assert(convertBase10ToBase2(12) == "1100");
   assert(convertBase10ToBase2(13) == "1101");
-  // 文字コードとは？のコードです。
+  // 文字コードとは？の参考例コードです。
   
   constexpr int charCodeA = convertCharToCharCode('A');
   assert(convertBase10ToBase2(charCodeA) == "1000001");
