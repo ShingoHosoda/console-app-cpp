@@ -66,6 +66,7 @@
     "algorithm": "cpp",
     "random": "cpp",
     "numeric": "cpp",
-    "filesystem": "cpp"
+    "filesystem": "cpp",
+    "cassert": "cpp"
   }
 }
