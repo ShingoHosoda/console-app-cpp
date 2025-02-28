@@ -52,7 +52,9 @@ HTTPやファイル保存、HTMLなどで指定する文字コードは文字符
 |    UTF-8    |     -      |     -      |    ○    |
 |   UTF-16    |     -      |     -      |    ○    |
 
-## ASCIIとは？
+## ASCII
+
+### ASCIIとは？
 
 ASCIIとはAmerican Standard Code for Infomation Interchangeの略です。
 
@@ -99,4 +101,39 @@ ASCIIとはAmerican Standard Code for Infomation Interchangeの略です。
 |  30   |       |  62   |   >   |  94   |   ^   |  126   |   ~   |
 |  31   |       |  63   |   ?   |  95   |   _   |  127   |       |
 
+## Unicode
+
 ### Unicodeとは？
+
+世界中の文字を扱えるようにした文字コード。収録文字は現代の文字だけではなく古代の文字や数学記号、絵文字も含まれています。Unicode以前は各国の標準化団体やコンピュターメーカーによって独自開発されていて互換性がありませんでした。
+
+Unicodeは国際規格のISO/IEC 10646（JIS X 0221）と互換があります。
+
+### Unicodeの構造(UCS-4)
+
+4バイト符号。
+
+ISO/IEC 10646では各バイトが面（plane）、区（row）、点（cell）に対応しています。
+
+面、区、点は00~FFまで割り当てられているもしくは割り当て可能領域になります。
+
+### 基本多言語面(BMP)
+
+ISO/IEC 10646の群0面0と同じです。もっともよく使う文字や記号、数字が含まれています。
+
+### 基本多言語面の構造
+
+|   収録文字等   |   Unicode範囲   |     備考     |
+| :------------: | :-------------: | :----------: |
+|  Basic Latin   | U+0000 ~ U+0070 | ASCIIと互換  |
+| IPA Extensions | U+0250 ~ U+02AF | 国際音声記号 |
+|     Greek      | U+0370 ~ U+03FF | ギリシャ文字 |
+|    Cyrillic    | U+0400 ~ U+04FF |  キリル文字  |
+|     Runic      | U+16A0 ~ U+16FF |  ルーン文字  |
+|    Hiragana    | U+3040 ~ U+309F |   ひらがな   |
+|    Katakana    | U+30A0 ~ U+30FF |   カタカナ   |
+|      CJK       | U+4E00 ~ U+9FFF | CJK統合漢字  |
+
+### UTF-16
+
+### UTF-8
