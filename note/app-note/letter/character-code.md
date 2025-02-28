@@ -121,20 +121,20 @@ ISO/IEC 10646では各バイトが面（plane）、区（row）、点（cell）�
 
 ISO/IEC 10646の群0面0と同じです。もっともよく使う文字や記号、数字が含まれています。
 
-### 基本多言語面の構造
+### 基本多言語面の構造（省略版）
 
-|          収録文字等           |   Unicode範囲   |            備考            |
-| :---------------------------: | :-------------: | :------------------------: |
-|          Basic Latin          | U+0000 ~ U+0070 |        ASCIIと互換         |
-|        IPA Extensions         | U+0250 ~ U+02AF |        国際音声記号        |
-|             Greek             | U+0370 ~ U+03FF |        ギリシャ文字        |
-|           Cyrillic            | U+0400 ~ U+04FF |         キリル文字         |
-|             Runic             | U+16A0 ~ U+16FF |         ルーン文字         |
-|           Hiragana            | U+3040 ~ U+309F |          ひらがな          |
-|           Katakana            | U+30A0 ~ U+30FF |          カタカナ          |
-|              CJK              | U+4E00 ~ U+9FFF |        CJK統合漢字         |
-|              ...              |       ...       |            ...             |
-| Halfwidth and Fullwidth Forms | U+FF00 ~ U+FFEF | 半角フォームと全角フォーム |
+|          収録文字等           |   Unicode範囲   |      備考      |
+| :---------------------------: | :-------------: | :------------: |
+|          Basic Latin          | U+0000 ~ U+0070 |  ASCIIと互換   |
+|        IPA Extensions         | U+0250 ~ U+02AF |  国際音声記号  |
+|             Greek             | U+0370 ~ U+03FF |  ギリシャ文字  |
+|           Cyrillic            | U+0400 ~ U+04FF |   キリル文字   |
+|             Runic             | U+16A0 ~ U+16FF |   ルーン文字   |
+|           Hiragana            | U+3040 ~ U+309F |    ひらがな    |
+|           Katakana            | U+30A0 ~ U+30FF |    カタカナ    |
+|              CJK              | U+4E00 ~ U+9FFF |  CJK統合漢字   |
+|              ...              |       ...       |      ...       |
+| Halfwidth and Fullwidth Forms | U+FF00 ~ U+FFEF | 半角形と全角形 |
 
 ### UTF-16
 
