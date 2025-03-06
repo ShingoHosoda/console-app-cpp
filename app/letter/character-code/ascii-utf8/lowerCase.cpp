@@ -14,9 +14,9 @@ constexpr char8 converteCharCodeToChar(const int code)
 
 int main()
 {
-  std::string upperCase{"abcdefghijklmnopqrstuvwxyz"};
+  std::string lowerCase{"abcdefghijklmnopqrstuvwxyz"};
   auto code = 97;
-  for (const auto character : upperCase)
+  for (const auto character : lowerCase)
   {
     assert(converteCharCodeToChar(code) == character);
     code++;

@@ -14,9 +14,9 @@ constexpr char8 converteCharCodeToChar(const int code)
 
 int main()
 {
-  std::string upperCase{"0123456789"};
+  std::string number{"0123456789"};
   auto code = 48;
-  for (const auto character : upperCase)
+  for (const auto character : number)
   {
     assert(converteCharCodeToChar(code) == character);
     code++;
