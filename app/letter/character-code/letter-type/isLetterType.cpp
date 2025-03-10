@@ -14,18 +14,34 @@
 #include "isLetterType.hpp"
 int main()
 {
-  // 大文字かどうかの判定
   std::string upperCaseData{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+  std::string lowerCaseData{"abcdefghijklmnopqrstuvwxyz"};
+  // 大文字かどうかの判定
   for (const auto &character : upperCaseData)
   {
     assert(letter::isUpperCase(character) == true);
   }
 
+  // 大文字から小文字に変換
+  auto index = 0;
+  for (const auto &character : upperCaseData)
+  {
+    assert(letter::convertUpperCaseToLowerCase(character) == lowerCaseData[index]);
+    index++;
+  }
+
   //  小文字かどうかの判定
-  std::string lowerCaseData{"abcdefghijklmnopqrstuvwxyz"};
   for (const auto &character : lowerCaseData)
   {
     assert(letter::isLowerCase(character) == true);
+  }
+
+  // 小文字から大文字に変換
+  index = 0;
+  for (const auto &character : lowerCaseData)
+  {
+    assert(letter::convertLowerCaseToUpperCase(character) == upperCaseData[index]);
+    index++;
   }
 
   // 数字かどうかの判定

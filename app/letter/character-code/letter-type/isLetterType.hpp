@@ -27,6 +27,15 @@ namespace letter
     return (int)character;
   }
 
+  /// @brief 文字コードをUTF-8の文字に変換します。
+  /// @param charCode 文字コード。
+  /// @return UTF-8の文字を返します。
+  [[nodiscard]]
+  constexpr char8 convertCharCodeToChar(const int charCode)
+  {
+    return (char8)charCode;
+  }
+
   /// @brief UTF-8の文字を大文字かどうか判定する。
   /// @param character UTF-8の文字。
   /// @return 大文字の場合true、そうでない場合はfalseを返す。
@@ -138,4 +147,37 @@ namespace letter
     }
     return false;
   }
+
+  /// @brief UTF-8の大文字をUTF-8の小文字に変換します。
+  /// @param character UTF-8の文字。
+  /// @return UTF-8の小文字を返します。
+  [[nodiscard]]
+  constexpr char8 convertUpperCaseToLowerCase(const char8 character)
+  {
+    if (isLowerCase(character))
+    {
+      return character;
+    }
+
+    auto charCode = convertCharToCharCode(character);
+
+    return convertCharCodeToChar(charCode + 32);
+  }
+  
+  /// @brief UTF-8の小文字をUTF-8の大文字に変換します。
+  /// @param character UTF-8の文字。
+  /// @return UTF-8の大文字を返します。
+  [[nodiscard]]
+  constexpr char8 convertLowerCaseToUpperCase(const char8 character)
+  {
+    if (isUpperCase(character))
+    {
+      return character;
+    }
+
+    auto charCode = convertCharToCharCode(character);
+
+    return convertCharCodeToChar(charCode - 32);
+  }
+
 }
