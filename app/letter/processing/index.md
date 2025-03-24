@@ -8,7 +8,7 @@
 
 判定は $S_{i} = S_{i + 1}$ で行います。
 
-[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/procesing/isEqualsLetter.cpp)
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isEqualsLetter.cpp)
 
 ### 連続する数字列や文字列の判定 $(1)$
 
@@ -16,7 +16,7 @@
 
 判定は $S_{i + 1} - S_{i} = 1$ で行います。
 
-[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/procesing/isSequenceLetter1.cpp)
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isSequenceLetter1.cpp)
 
 ### 連続する数字列や文字列の判定 $(2)$
 
@@ -24,4 +24,4 @@
 
 判定は $S_{i + 1} - S_{i} = 1$ と $S_{i} - S_{i + 1} = 1$ で行います。
 
-[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/procesing/isSequenceLetter2.cpp)
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isSequenceLetter2.cpp)
