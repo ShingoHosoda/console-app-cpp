@@ -17,3 +17,11 @@
 判定は $S_{i + 1} - S_{i} = 1$ で行います。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/procesing/isSequenceLetter1.cpp)
+
+### 連続する数字列や文字列の判定 $(2)$
+
+連続する数字とは```1234```や```4321```などです。```3457```や```1122```は連続する数字ではありません。
+
+判定は $S_{i + 1} - S_{i} = 1$ と $S_{i} - S_{i + 1} = 1$ で行います。
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/procesing/isSequenceLetter2.cpp)
