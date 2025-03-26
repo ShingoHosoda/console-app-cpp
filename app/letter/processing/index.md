@@ -43,3 +43,9 @@
 数字が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainNumber.cpp)
+
+### 特定の記号（約物）が含まれているとは
+
+記号```@, ?, !```が含まれているかどうかの判定です。
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainSymbol.cpp)
