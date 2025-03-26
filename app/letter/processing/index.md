@@ -37,3 +37,9 @@
 英小文字が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainLowerCase.cpp)
+
+### 数字が含まれているとは
+
+数字が含まれているかどうかの判定です。
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainNumber.cpp)
