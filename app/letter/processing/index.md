@@ -57,3 +57,7 @@
 ### 入力された文字が小文字かどうかを判定
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isLowerCase.cpp)
+
+### 入力された文字が数字かどうかを判定
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isNumber.cpp)
