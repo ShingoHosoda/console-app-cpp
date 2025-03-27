@@ -61,3 +61,16 @@
 ### 入力された文字が数字かどうかを判定
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isNumber.cpp)
+
+### 入力された文字が記号かどうかを判定
+
+記号セット一覧
+
+| 記号セット  |   min   |    max    |
+| :---------: | :-----: | :-------: |
+| 記号セット1 | ```!``` |  ```/```  |
+| 記号セット2 | ```:``` |  ```@```  |
+| 記号セット3 | ```[``` | ``` ` ``` |
+| 記号セット4 | ```{``` |  ```~```  |
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isSymbol.cpp)
