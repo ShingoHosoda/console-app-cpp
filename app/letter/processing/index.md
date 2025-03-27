@@ -28,24 +28,28 @@
 
 ### 英大文字が含まれているとは
 
-英大文字が含まれているかどうかの判定です。
+文字列に英大文字が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainUpperCase.cpp)
 
 ### 英小文字が含まれているとは
 
-英小文字が含まれているかどうかの判定です。
+文字列に英小文字が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainLowerCase.cpp)
 
 ### 数字が含まれているとは
 
-数字が含まれているかどうかの判定です。
+文字列に数字が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainNumber.cpp)
 
 ### 特定の記号（約物）が含まれているとは
 
-記号```@, ?, !```が含まれているかどうかの判定です。
+文字列に記号```@, ?, !```が含まれているかどうかの判定です。
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isContainSymbol.cpp)
+
+### 入力された文字が大文字かどうかを判定
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isUpperCase.cpp)
