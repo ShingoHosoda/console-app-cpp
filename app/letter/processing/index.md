@@ -83,6 +83,6 @@
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/convertLowerCaseToUpperCase.cpp)
 
-### 文字をN文字分右にずらす
+### テキストをN文字分右にずらす
 
-### 文字をN文字分左にずらす
+### テキストをN文字分左にずらす
