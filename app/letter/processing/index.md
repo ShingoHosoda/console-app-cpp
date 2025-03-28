@@ -74,3 +74,13 @@
 | 記号セット4 | ```{``` |  ```~```  |
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/isSymbol.cpp)
+
+### 大文字を小文字に変換する
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/convertUpperCaseToLowerCase.cpp)
+
+### 小文字を大文字に変換する
+
+### 文字をN文字分右にずらす
+
+### 文字をN文字分左にずらす
