@@ -83,7 +83,9 @@
 
 [ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/convertLowerCaseToUpperCase.cpp)
 
-### 大文字と小文字のアルファベットの番号を出力する
+### 大文字と小文字のアルファベット順の番号を出力する
+
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/alphabeticalOrderNumber.cpp)
 
 ### テキストをN文字分右にずらす
 
