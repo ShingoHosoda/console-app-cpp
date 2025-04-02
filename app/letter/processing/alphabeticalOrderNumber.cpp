@@ -96,22 +96,22 @@ constexpr int convertCharToAlphabeticalNumber(const char8 character)
   if (isUpperCase(character))
   {
     constexpr auto minUpperCaseCode = convertCharToCharCode('A');
-    return charCode - minUpperCaseCode + 1;
+    return charCode - minUpperCaseCode;
   }
 
   constexpr auto minLowerCaseCode = convertCharToCharCode('a');
-  return charCode - minLowerCaseCode + 1;
+  return charCode - minLowerCaseCode;
 }
 
 int main()
 {
   // アルファベット順の番号に変換されること
-  assert(convertCharToAlphabeticalNumber('A') == 1);
-  assert(convertCharToAlphabeticalNumber('B') == 2);
-  assert(convertCharToAlphabeticalNumber('Z') == 26);
+  assert(convertCharToAlphabeticalNumber('A') == 0);
+  assert(convertCharToAlphabeticalNumber('B') == 1);
+  assert(convertCharToAlphabeticalNumber('Z') == 25);
 
-  assert(convertCharToAlphabeticalNumber('a') == 1);
-  assert(convertCharToAlphabeticalNumber('b') == 2);
-  assert(convertCharToAlphabeticalNumber('z') == 26);
+  assert(convertCharToAlphabeticalNumber('a') == 0);
+  assert(convertCharToAlphabeticalNumber('b') == 1);
+  assert(convertCharToAlphabeticalNumber('z') == 25);
   return 0;
 }
