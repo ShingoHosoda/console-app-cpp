@@ -126,4 +126,6 @@
 |   N   |   O   |   P   |   Q   |   R   |   S   |   T   |   U   |   V   |   W   |   X   |   Y   |   Z   |
 |   Q   |   R   |   S   |   T   |   U   |   V   |   W   |   X   |   Y   |   Z   |   A   |   B   |   C   |
 
+[ソースコード](https://github.com/ShingoHosoda/console-app-cpp/blob/main/app/letter/processing/delayText.cpp)
+
 ## テキストをN文字分左にずらす
