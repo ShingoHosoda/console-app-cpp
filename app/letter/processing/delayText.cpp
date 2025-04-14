@@ -4,6 +4,14 @@
 #include <iostream>
 #include <cassert>
 using char8 = char; // UTF-8の文字型
+
+/// @brief
+enum DelayCommand
+{
+  RIGHT = 1,
+  LEFT = 2,
+};
+
 /// @brief UTF-8の文字を文字コードに変換する。
 /// @param character UTF-8の文字。
 /// @return UTF-8の文字コードを返します。
@@ -39,25 +47,29 @@ constexpr bool isUpperCase(const char8 character)
 }
 
 /// @brief 平文をずらします。
-/// @param planeText 平文
-/// @param delay ずらす数
+/// @param planeText 平文。
+/// @param delay ずらす数。
+/// @param command 右もしくは左にずらすコマンド。
 /// @return ずらした平文を返します。
-std::string delayText(std::string planeText, int delay)
+std::string delayText(std::string planeText, int delay, DelayCommand command = RIGHT)
 {
   std::string delayText = "";
-  for (auto &character : planeText)
+  if (command == RIGHT)
   {
-    if (isUpperCase(character))
+    for (auto &character : planeText)
     {
-      auto charNumber = convertCharToCharCode(character) - convertCharToCharCode('A');
-      auto delayCharNumber = (charNumber + delay) % 26;
-      auto charCode = delayCharNumber + convertCharToCharCode('A');
-      delayText += convertCharCodeToChar(charCode);
-    }
-    else
-    {
+      if (isUpperCase(character))
+      {
+        auto charNumber = convertCharToCharCode(character) - convertCharToCharCode('A');
+        auto delayCharNumber = (charNumber + delay) % 26;
+        auto charCode = delayCharNumber + convertCharToCharCode('A');
+        delayText += convertCharCodeToChar(charCode);
+      }
+      else
+      {
 
-      delayText += character;
+        delayText += character;
+      }
     }
   }
   return delayText;
@@ -66,8 +78,12 @@ std::string delayText(std::string planeText, int delay)
 int main()
 {
   constexpr auto delay = 3;
+  // 右にずらす
   assert(delayText("HELLO WORLD", delay) == "KHOOR ZRUOG");
   assert(delayText("CAESAR", delay) == "FDHVDU");
   assert(delayText("SECURITY", delay) == "VHFXULWB");
+
+  
+
   return 0;
 }
